@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stress-app
+
+spec:
+  replicas: 20
+
+  selector:
+    matchLabels:
+      app: stress-app
+
+  template:
+    metadata:
+      labels:
+        app: stress-app
+
+    spec:
+      containers:
+      - name: stress
+        image: nginx
+
+        resources:
+          requests:
+            cpu: "1000m"
+            memory: "1Gi"
+
+          limits:
+            cpu: "1000m"
+            memory: "1Gi"
