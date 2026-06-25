@@ -1,0 +1,6 @@
+# Development Environment Overrides
+appEnv: "dev"
+replicaCount: 1
+
+autoscaling:
+  enabled: false

@@ -1,0 +1,8 @@
+# Production Environment Overrides
+appEnv: "prod"
+replicaCount: 4
+
+autoscaling:
+  enabled: true
+  minReplicas: 4
+  maxReplicas: 10
