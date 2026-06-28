@@ -1,0 +1,9 @@
+replicaCount: 2
+
+image:
+  repository: 866252497011.dkr.ecr.us-east-1.amazonaws.com/payment-service
+  tag: "92c709b2fbb3538a93eb23986f00fda215599c7e"
+
+service:
+  type: ClusterIP
+  port: 80

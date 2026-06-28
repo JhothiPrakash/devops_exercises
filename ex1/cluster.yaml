@@ -1,0 +1,16 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: gitops-cluster
+  region: us-east-1 # Change if you prefer another region
+
+managedNodeGroups:
+  - name: standard-nodes
+    instanceType: t3.medium
+    minSize: 2
+    maxSize: 3
+    iam:
+      withAddonPolicies:
+        autoScaler: true
+        albIngress: true
